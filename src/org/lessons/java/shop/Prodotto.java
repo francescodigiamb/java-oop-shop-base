@@ -1,7 +1,6 @@
 package org.lessons.java.shop;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Prodotto {
 	
@@ -9,7 +8,7 @@ public class Prodotto {
 	String nome;
 	String descrizione;
 	double prezzo;
-	int iva;
+	double iva = 0.22;
 	
 	void codiceRandom() {
         Random random = new Random();
@@ -23,7 +22,6 @@ public class Prodotto {
 	
 	double prezzoIva() {
 		// calcoliamo l'iva
-		double iva = 0.22;
 		double prezzoIva = prezzo - (prezzo * iva);
 //		System.out.println(prezzoIva);
 		return prezzoIva;
