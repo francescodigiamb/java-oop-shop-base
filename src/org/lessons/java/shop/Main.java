@@ -6,15 +6,17 @@ public class Main {
 		
 		Prodotto prodotto1 = new Prodotto ();
 		
-//		prodotto1.nome = prodotto1.nomeProdotto();
+		prodotto1.nome = "Shampoo";
+		prodotto1.codiceRandom();
+		prodotto1.descrizione = "Per capelli lisci";
+		prodotto1.prezzo = 2;
+		prodotto1.prezzoIva();
 		
-//		int codiceProdotto = prodotto1.codiceRandom();
-				
-//		prodotto1.prezzo = prodotto1.prezzoBase();
-		
-//		double prezzoIvaProdotto = prodotto1.prezzoIva();
-		
-		String conc  = prodotto1.concatenazione();
+		System.out.println("Il codice del prodotto è " + prodotto1.codice);
+		System.out.println("Il nome del prodotto è " + prodotto1.nome);
+		System.out.println("Descrizione prodotto " + prodotto1.descrizione);
+		System.out.println("Il prezzo del prodotto è " + prodotto1.prezzoIva());
+		System.out.println(prodotto1.nomeEsteso());
 	}
 	
 }
