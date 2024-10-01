@@ -4,31 +4,56 @@ import java.util.Random;
 
 public class Prodotto {
 	
-	int codice;
-	String nome;
-	String descrizione;
-	double prezzo;
-	double iva = 0.22;
+	private int codice;
+	private String nome;
+	private String descrizione;
+	private double prezzo;
+	private double iva;
 	
-	void codiceRandom() {
+	Prodotto () {
+		setCodice ();
+		iva = 0.22;
+		}
+	Prodotto (String nome, String descrizione) {
+		this();
+		this.nome = nome;
+		this.descrizione = descrizione;
+	}
+	
+	Prodotto (String nome, String descrizione, double prezzo){
+		this(nome, descrizione);
+		if (prezzo >=0) {
+			this.prezzo = prezzo;
+		} else {
+			this.prezzo = 50;
+		}
+		
+	}
+	
+	public void setCodice() {
         Random random = new Random();
         // genera numero casuale tra 0 e decide l'utente
         codice = random.nextInt(10000);
 	}
 	
-	double prezzoBase() {
-		return prezzo;
+	public void setDescrizione (String descrizione) {
+		this.descrizione = descrizione;
 	}
 	
-	double prezzoIva() {
+	public void setPrezzoBase(double prezzo) {
+		if (prezzo >=0) {
+			this.prezzo = prezzo;
+		}
+	}
+	
+	public double getPrezzoIva() {
 		// calcoliamo l'iva
-		double prezzoIva = prezzo - (prezzo * iva);
+		return this.prezzo = prezzo - (prezzo * iva);
 //		System.out.println(prezzoIva);
-		return prezzoIva;
 	}
 	
-	String nomeEsteso () {		
-		return codice + "-" + nome;		
+	String getNomeEsteso () {		
+		return this.codice + "-" + this.nome;		
 	}
 
 	
