@@ -48,7 +48,7 @@ public class Prodotto {
 	
 	public double getPrezzoIva() {
 		// calcoliamo l'iva
-		return this.prezzo = prezzo - (prezzo * iva);
+		return this.prezzo = prezzo + (prezzo * iva);
 //		System.out.println(prezzoIva);
 	}
 	
