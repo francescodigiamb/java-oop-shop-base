@@ -1,3 +1,5 @@
 
 .classpath
 .project
+bin/org/lessons/java/shop/Main.class
+bin/org/lessons/java/shop/Prodotto.class
